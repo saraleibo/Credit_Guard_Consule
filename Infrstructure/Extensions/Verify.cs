@@ -15,11 +15,11 @@ namespace CreditGuardConsole.Infrstructure.Extensions
             try
             {
                 NUnit.Framework.Assert.AreEqual(TextValue, element.Text);
-                // ReportStep(LogStatus.Pass, "Text: " + TextValue + " Exists in Element");
+                 ReportStep(LogStatus.Pass, "Text: " + TextValue + " Exists in Element");
             }
             catch (AssertionException e)
             {
-                // ReportFailedStep(LogStatus.Fail, TextValue + " Does NOT Exist in Element");
+                 ReportFailedStep(LogStatus.Fail, TextValue + " Does NOT Exist in Element");
             }
 
         }
@@ -28,11 +28,11 @@ namespace CreditGuardConsole.Infrstructure.Extensions
             try
             {
                 NUnit.Framework.Assert.AreEqual(ExpectedUrl, driver.Url);
-                // ReportStep(LogStatus.Pass, "The move to the  " + Pagename + " was saccessful");
+                 ReportStep(LogStatus.Pass, "The move to the  " + Pagename + " was saccessful");
             }
             catch (AssertionException e)
             {
-                // ReportFailedStep(LogStatus.Fail, "The move to the  " + Pagename + " wasn't saccessful");
+                 ReportFailedStep(LogStatus.Fail, "The move to the  " + Pagename + " wasn't saccessful");
             }
         }
         public static void Verifytype(string Expectedtype, string type)
@@ -40,11 +40,11 @@ namespace CreditGuardConsole.Infrstructure.Extensions
             try
             {
                 NUnit.Framework.Assert.AreEqual(Expectedtype, type);
-                // ReportStep(LogStatus.Pass, "The type password correct");
+                 ReportStep(LogStatus.Pass, "The type password correct");
             }
             catch (AssertionException e)
             {
-                // ReportFailedStep(LogStatus.Fail, "The type password not correct");
+                 ReportFailedStep(LogStatus.Fail, "The type password not correct");
             }
         }
     }
