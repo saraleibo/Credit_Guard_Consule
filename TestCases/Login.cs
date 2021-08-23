@@ -14,7 +14,7 @@ namespace CreditGuardConsole.TestCases
         [Test]
         public void login_Test01()
         {
-            //test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
+            test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
             Flows_login.login();
            
         }
@@ -22,13 +22,13 @@ namespace CreditGuardConsole.TestCases
         [Test]
         public void login_Test02()
         {
-            //test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
+            test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
             Flows_login.forgetpassword();
         }
         [Test]
         public void login_Test03()
         {
-            //test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
+            test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
             Flows_login.notvalid_login();
 
         }
@@ -36,7 +36,7 @@ namespace CreditGuardConsole.TestCases
         [Test]
         public void login_Test04()
         {
-            //test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
+            test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
             Flows_login.requiredfields();
 
         }
@@ -44,14 +44,14 @@ namespace CreditGuardConsole.TestCases
         [Test]
         public void login_Test05()
         {
-            //test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
+            test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
             Flows_login.MaxInputLenght();
         }
 
         [Test]
         public void login_Test06()
         {
-            //test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
+            test = extent.StartTest(TestContext.CurrentContext.Test.Name, "This is a Test Dscription");
             Flows_login.passwordformat();
         }
 
