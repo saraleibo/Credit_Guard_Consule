@@ -10,7 +10,7 @@ namespace CreditGuardConsole.Utilities
         public static void InitPages()
         {
             PageFactory.InitElements(driver, main);
-            PageFactory.InitElements(driver, result);
+            
         }
     }
 }
