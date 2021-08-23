@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Environment>
+
+  <BrowserType>ie</BrowserType>
+
+  <URL>https://cg-uat.stage-rc.com/login</URL>
+
+  <ReportFilePath>C:\Test\MyReports\Execution</ReportFilePath>
+
+  <ReportFileName>\report.html</ReportFileName>
+
+</Environment>
