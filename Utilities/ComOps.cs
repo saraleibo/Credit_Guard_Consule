@@ -23,10 +23,10 @@ namespace CreditGuardConsole.Utilities
         }
 
         [TearDown]
-        //public void AfterTest()
-        //{
-        //    CloseReportTest();
-        //}
+        public void AfterTest()
+        {
+            CloseReportTest();
+        }
 
         [OneTimeTearDown]
         public void closeSession()
@@ -64,7 +64,7 @@ namespace CreditGuardConsole.Utilities
 
         public static string getData(string sNodeName)
         {
-            using (XmlReader reader = XmlReader.Create(@"C:\Users\sara\source\repos\CreditGuardConsole\Configuration\DataConfig.xml"))
+            using (XmlReader reader = XmlReader.Create(@".\DataConfig.xml"))
             {
                 while (reader.Read())
                 {
@@ -81,7 +81,7 @@ namespace CreditGuardConsole.Utilities
         public void InitReport()
         {
             Directory.CreateDirectory(getData("ReportFilePath") + TimeStamp);
-            //extent = new ExtentReports(getData("ReportFilePath") + TimeStamp + getData("ReportFileName"));
+            extent = new ExtentReports(getData("ReportFilePath") + TimeStamp + getData("ReportFileName"));
         }
 
         public static void  InitReportTest(String TestName, String TestDescription)
@@ -91,26 +91,26 @@ namespace CreditGuardConsole.Utilities
 
         }
 
-        //public static void ReportStep(LogStatus Status, String StepDetails)
-        //{
-        // //   test.Log(Status, StepDetails);
-        //}
+        public static void ReportStep(LogStatus Status, String StepDetails)
+        {
+          test.Log(Status, StepDetails);
+        }
 
-        //public static void ReportFailedStep(LogStatus Status, String StepDetails)
-        //{
-        //    test.Log(Status, StepDetails + test.AddScreenCapture(ScreenShot()));
-        //}
+        public static void ReportFailedStep(LogStatus Status, String StepDetails)
+        {
+            test.Log(Status, StepDetails + test.AddScreenCapture(ScreenShot()));
+        }
 
-        //public void CloseReportTest()
-        //{
-        //    extent.EndTest(test);
-        //}
+        public void CloseReportTest()
+        {
+            extent.EndTest(test);
+        }
 
         public void closeReportAndBrowser()
         {
             driver.Quit();
-            // extent.Close();
-            //extent.Flush();
+            extent.Close();
+            extent.Flush();
         }
 
         public static String ScreenShot()
