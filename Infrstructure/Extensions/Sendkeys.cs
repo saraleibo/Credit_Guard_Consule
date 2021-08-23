@@ -12,11 +12,11 @@ namespace CreditGuardConsole.Infrstructure.Extensions
             try
             {
                 element.SendKeys(TextValue);
-                //ReportStep(LogStatus.Pass, "Element:  was Updated successfully");
+                ReportStep(LogStatus.Pass, "Element:  was Updated successfully");
             }
             catch (Exception e)
             {
-               // ReportFailedStep(LogStatus.Fail, "Element was NOT Update, See Error: " + e);
+                ReportFailedStep(LogStatus.Fail, "Element was NOT Update, See Error: " + e);
             }
         }
     }
