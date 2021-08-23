@@ -14,11 +14,11 @@ namespace CreditGuardConsole.Infrstructure.Extensions
             try
             {
                 element.Click();
-              //  ReportStep(LogStatus.Pass, "Element: was clicked successfully");
+                ReportStep(LogStatus.Pass, "Element: was clicked successfully");
             }
             catch (Exception e)
             {
-              //  ReportFailedStep(LogStatus.Fail, "Element was NOT clicked, See Error: " + e);
+                ReportFailedStep(LogStatus.Fail, "Element was NOT clicked, See Error: " + e);
             }
         }
     }
